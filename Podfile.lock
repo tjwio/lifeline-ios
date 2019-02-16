@@ -1,20 +1,24 @@
 PODS:
+  - Alamofire (5.0.0-beta.2)
   - ArcGIS-Runtime-SDK-iOS (100.4)
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.2)
   - ArcGIS-Runtime-SDK-iOS (= 100.4)
   - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - ArcGIS-Runtime-SDK-iOS
     - SnapKit
 
 SPEC CHECKSUMS:
+  Alamofire: d1e5493588babe3e7b56ae29e8032942f4de09fe
   ArcGIS-Runtime-SDK-iOS: 3e3f7480fe2a3b0c094ed57977cab1482e81ec6f
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: a4f6a2a4d306656cd73486965f798a85246c3897
+PODFILE CHECKSUM: 82e0473205e7a89b85d829d2236a408ecb6b8cb6
 
 COCOAPODS: 1.6.0

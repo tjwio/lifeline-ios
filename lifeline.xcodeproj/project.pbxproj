@@ -14,6 +14,10 @@
 		2F71246E2218A64B00215C79 /* lifelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F71246D2218A64B00215C79 /* lifelineTests.swift */; };
 		2F7124792218A64C00215C79 /* lifelineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7124782218A64C00215C79 /* lifelineUITests.swift */; };
 		2F7124872218A6E200215C79 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7124862218A6E200215C79 /* HomeViewController.swift */; };
+		2F71248D2218B1B600215C79 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F71248C2218B1B600215C79 /* NetworkManager.swift */; };
+		2F71248F2218B1E200215C79 /* NetworkManager+CrimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F71248E2218B1E200215C79 /* NetworkManager+CrimeData.swift */; };
+		2F7124922218B3E300215C79 /* Crime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7124912218B3E300215C79 /* Crime.swift */; };
+		2F7124952218B64600215C79 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7124942218B64600215C79 /* AppConstants.swift */; };
 		80FC34E7EB7794DA7050CE54 /* Pods_lifeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76628A3202C94A22FB2FB85 /* Pods_lifeline.framework */; };
 		FF4AE3CF42561D439EA9F848 /* Pods_lifelineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A4772A98C5E15165FA3518 /* Pods_lifelineUITests.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +52,10 @@
 		2F7124782218A64C00215C79 /* lifelineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lifelineUITests.swift; sourceTree = "<group>"; };
 		2F71247A2218A64C00215C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F7124862218A6E200215C79 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2F71248C2218B1B600215C79 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2F71248E2218B1E200215C79 /* NetworkManager+CrimeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+CrimeData.swift"; sourceTree = "<group>"; };
+		2F7124912218B3E300215C79 /* Crime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime.swift; sourceTree = "<group>"; };
+		2F7124942218B64600215C79 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		6522A811BCE4E7FBC78A00CA /* Pods-lifeline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lifeline.debug.xcconfig"; path = "Target Support Files/Pods-lifeline/Pods-lifeline.debug.xcconfig"; sourceTree = "<group>"; };
 		6F2BAC71F6C36CA74B7A62B5 /* Pods-lifeline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lifeline.release.xcconfig"; path = "Target Support Files/Pods-lifeline/Pods-lifeline.release.xcconfig"; sourceTree = "<group>"; };
 		7E3B69FAAC1688E4C95AE2D4 /* Pods-lifelineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lifelineTests.debug.xcconfig"; path = "Target Support Files/Pods-lifelineTests/Pods-lifelineTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,8 +133,10 @@
 		2F7124572218A64900215C79 /* lifeline */ = {
 			isa = PBXGroup;
 			children = (
+				2F7124882218B13300215C79 /* Controller */,
+				2F7124892218B13F00215C79 /* Model */,
+				2F71248A2218B14700215C79 /* View */,
 				2F7124582218A64900215C79 /* AppDelegate.swift */,
-				2F7124862218A6E200215C79 /* HomeViewController.swift */,
 				2F71245F2218A64B00215C79 /* Assets.xcassets */,
 				2F7124612218A64B00215C79 /* LaunchScreen.storyboard */,
 				2F7124642218A64B00215C79 /* Info.plist */,
@@ -150,6 +160,56 @@
 				2F71247A2218A64C00215C79 /* Info.plist */,
 			);
 			path = lifelineUITests;
+			sourceTree = "<group>";
+		};
+		2F7124882218B13300215C79 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F7124862218A6E200215C79 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2F7124892218B13F00215C79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F7124932218B63F00215C79 /* Constants */,
+				2F7124902218B31F00215C79 /* Crime */,
+				2F71248B2218B14F00215C79 /* Network */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F71248A2218B14700215C79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F71248B2218B14F00215C79 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2F71248C2218B1B600215C79 /* NetworkManager.swift */,
+				2F71248E2218B1E200215C79 /* NetworkManager+CrimeData.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2F7124902218B31F00215C79 /* Crime */ = {
+			isa = PBXGroup;
+			children = (
+				2F7124912218B3E300215C79 /* Crime.swift */,
+			);
+			path = Crime;
+			sourceTree = "<group>";
+		};
+		2F7124932218B63F00215C79 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				2F7124942218B64600215C79 /* AppConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		8B5DF431CAC21275F12874F1 /* Frameworks */ = {
@@ -346,6 +406,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-lifeline/Pods-lifeline-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${PODS_ROOT}/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework",
 				"${PODS_ROOT}/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework.dSYM",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -354,6 +415,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ArcGIS.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/ArcGIS.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -414,8 +476,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F7124922218B3E300215C79 /* Crime.swift in Sources */,
+				2F7124952218B64600215C79 /* AppConstants.swift in Sources */,
+				2F71248D2218B1B600215C79 /* NetworkManager.swift in Sources */,
 				2F7124592218A64900215C79 /* AppDelegate.swift in Sources */,
 				2F7124872218A6E200215C79 /* HomeViewController.swift in Sources */,
+				2F71248F2218B1E200215C79 /* NetworkManager+CrimeData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
