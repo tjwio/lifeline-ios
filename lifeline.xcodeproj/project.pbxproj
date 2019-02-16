@@ -1,0 +1,747 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2438B45119BC6F05619F2AB6 /* Pods_lifelineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1013CF92EEE775A93469372 /* Pods_lifelineTests.framework */; };
+		2F7124592218A64900215C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7124582218A64900215C79 /* AppDelegate.swift */; };
+		2F7124602218A64B00215C79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F71245F2218A64B00215C79 /* Assets.xcassets */; };
+		2F7124632218A64B00215C79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7124612218A64B00215C79 /* LaunchScreen.storyboard */; };
+		2F71246E2218A64B00215C79 /* lifelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F71246D2218A64B00215C79 /* lifelineTests.swift */; };
+		2F7124792218A64C00215C79 /* lifelineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7124782218A64C00215C79 /* lifelineUITests.swift */; };
+		2F7124872218A6E200215C79 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7124862218A6E200215C79 /* HomeViewController.swift */; };
+		80FC34E7EB7794DA7050CE54 /* Pods_lifeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76628A3202C94A22FB2FB85 /* Pods_lifeline.framework */; };
+		FF4AE3CF42561D439EA9F848 /* Pods_lifelineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A4772A98C5E15165FA3518 /* Pods_lifelineUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F71246A2218A64B00215C79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F71244D2218A64900215C79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F7124542218A64900215C79;
+			remoteInfo = lifeline;
+		};
+		2F7124752218A64C00215C79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F71244D2218A64900215C79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F7124542218A64900215C79;
+			remoteInfo = lifeline;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F7124552218A64900215C79 /* lifeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lifeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F7124582218A64900215C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2F71245F2218A64B00215C79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F7124622218A64B00215C79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F7124642218A64B00215C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F7124692218A64B00215C79 /* lifelineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lifelineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F71246D2218A64B00215C79 /* lifelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lifelineTests.swift; sourceTree = "<group>"; };
+		2F71246F2218A64C00215C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F7124742218A64C00215C79 /* lifelineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lifelineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F7124782218A64C00215C79 /* lifelineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lifelineUITests.swift; sourceTree = "<group>"; };
+		2F71247A2218A64C00215C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F7124862218A6E200215C79 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6522A811BCE4E7FBC78A00CA /* Pods-lifeline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lifeline.debug.xcconfig"; path = "Target Support Files/Pods-lifeline/Pods-lifeline.debug.xcconfig"; sourceTree = "<group>"; };
+		6F2BAC71F6C36CA74B7A62B5 /* Pods-lifeline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lifeline.release.xcconfig"; path = "Target Support Files/Pods-lifeline/Pods-lifeline.release.xcconfig"; sourceTree = "<group>"; };
+		7E3B69FAAC1688E4C95AE2D4 /* Pods-lifelineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lifelineTests.debug.xcconfig"; path = "Target Support Files/Pods-lifelineTests/Pods-lifelineTests.debug.xcconfig"; sourceTree = "<group>"; };
+		81A4772A98C5E15165FA3518 /* Pods_lifelineUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lifelineUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9770A44693B61B0277974647 /* Pods-lifelineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lifelineUITests.release.xcconfig"; path = "Target Support Files/Pods-lifelineUITests/Pods-lifelineUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9BB1A135EF301F6E31FEF87A /* Pods-lifelineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lifelineUITests.debug.xcconfig"; path = "Target Support Files/Pods-lifelineUITests/Pods-lifelineUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1013CF92EEE775A93469372 /* Pods_lifelineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lifelineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D76628A3202C94A22FB2FB85 /* Pods_lifeline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lifeline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC17E2BFB623CAF2454DF7D2 /* Pods-lifelineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lifelineTests.release.xcconfig"; path = "Target Support Files/Pods-lifelineTests/Pods-lifelineTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F7124522218A64900215C79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80FC34E7EB7794DA7050CE54 /* Pods_lifeline.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F7124662218A64B00215C79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2438B45119BC6F05619F2AB6 /* Pods_lifelineTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F7124712218A64C00215C79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF4AE3CF42561D439EA9F848 /* Pods_lifelineUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		299372BDCE879CF7C5AB947F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6522A811BCE4E7FBC78A00CA /* Pods-lifeline.debug.xcconfig */,
+				6F2BAC71F6C36CA74B7A62B5 /* Pods-lifeline.release.xcconfig */,
+				7E3B69FAAC1688E4C95AE2D4 /* Pods-lifelineTests.debug.xcconfig */,
+				FC17E2BFB623CAF2454DF7D2 /* Pods-lifelineTests.release.xcconfig */,
+				9BB1A135EF301F6E31FEF87A /* Pods-lifelineUITests.debug.xcconfig */,
+				9770A44693B61B0277974647 /* Pods-lifelineUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2F71244C2218A64900215C79 = {
+			isa = PBXGroup;
+			children = (
+				2F7124572218A64900215C79 /* lifeline */,
+				2F71246C2218A64B00215C79 /* lifelineTests */,
+				2F7124772218A64C00215C79 /* lifelineUITests */,
+				2F7124562218A64900215C79 /* Products */,
+				299372BDCE879CF7C5AB947F /* Pods */,
+				8B5DF431CAC21275F12874F1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2F7124562218A64900215C79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F7124552218A64900215C79 /* lifeline.app */,
+				2F7124692218A64B00215C79 /* lifelineTests.xctest */,
+				2F7124742218A64C00215C79 /* lifelineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F7124572218A64900215C79 /* lifeline */ = {
+			isa = PBXGroup;
+			children = (
+				2F7124582218A64900215C79 /* AppDelegate.swift */,
+				2F7124862218A6E200215C79 /* HomeViewController.swift */,
+				2F71245F2218A64B00215C79 /* Assets.xcassets */,
+				2F7124612218A64B00215C79 /* LaunchScreen.storyboard */,
+				2F7124642218A64B00215C79 /* Info.plist */,
+			);
+			path = lifeline;
+			sourceTree = "<group>";
+		};
+		2F71246C2218A64B00215C79 /* lifelineTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F71246D2218A64B00215C79 /* lifelineTests.swift */,
+				2F71246F2218A64C00215C79 /* Info.plist */,
+			);
+			path = lifelineTests;
+			sourceTree = "<group>";
+		};
+		2F7124772218A64C00215C79 /* lifelineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2F7124782218A64C00215C79 /* lifelineUITests.swift */,
+				2F71247A2218A64C00215C79 /* Info.plist */,
+			);
+			path = lifelineUITests;
+			sourceTree = "<group>";
+		};
+		8B5DF431CAC21275F12874F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D76628A3202C94A22FB2FB85 /* Pods_lifeline.framework */,
+				A1013CF92EEE775A93469372 /* Pods_lifelineTests.framework */,
+				81A4772A98C5E15165FA3518 /* Pods_lifelineUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F7124542218A64900215C79 /* lifeline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F71247D2218A64C00215C79 /* Build configuration list for PBXNativeTarget "lifeline" */;
+			buildPhases = (
+				D96884A915A525808E9033F8 /* [CP] Check Pods Manifest.lock */,
+				2F7124512218A64900215C79 /* Sources */,
+				2F7124522218A64900215C79 /* Frameworks */,
+				2F7124532218A64900215C79 /* Resources */,
+				A26C3A39528CA053D430068C /* [CP] Embed Pods Frameworks */,
+				702CED71CC3CBDF43C9627AD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lifeline;
+			productName = lifeline;
+			productReference = 2F7124552218A64900215C79 /* lifeline.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F7124682218A64B00215C79 /* lifelineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F7124802218A64C00215C79 /* Build configuration list for PBXNativeTarget "lifelineTests" */;
+			buildPhases = (
+				D6E553701D14C624D5889632 /* [CP] Check Pods Manifest.lock */,
+				2F7124652218A64B00215C79 /* Sources */,
+				2F7124662218A64B00215C79 /* Frameworks */,
+				2F7124672218A64B00215C79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F71246B2218A64B00215C79 /* PBXTargetDependency */,
+			);
+			name = lifelineTests;
+			productName = lifelineTests;
+			productReference = 2F7124692218A64B00215C79 /* lifelineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2F7124732218A64C00215C79 /* lifelineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F7124832218A64C00215C79 /* Build configuration list for PBXNativeTarget "lifelineUITests" */;
+			buildPhases = (
+				09ED49C9EA88CC0AE3F0BB67 /* [CP] Check Pods Manifest.lock */,
+				2F7124702218A64C00215C79 /* Sources */,
+				2F7124712218A64C00215C79 /* Frameworks */,
+				2F7124722218A64C00215C79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F7124762218A64C00215C79 /* PBXTargetDependency */,
+			);
+			name = lifelineUITests;
+			productName = lifelineUITests;
+			productReference = 2F7124742218A64C00215C79 /* lifelineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F71244D2218A64900215C79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = tjwio;
+				TargetAttributes = {
+					2F7124542218A64900215C79 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					2F7124682218A64B00215C79 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2F7124542218A64900215C79;
+					};
+					2F7124732218A64C00215C79 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2F7124542218A64900215C79;
+					};
+				};
+			};
+			buildConfigurationList = 2F7124502218A64900215C79 /* Build configuration list for PBXProject "lifeline" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F71244C2218A64900215C79;
+			productRefGroup = 2F7124562218A64900215C79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F7124542218A64900215C79 /* lifeline */,
+				2F7124682218A64B00215C79 /* lifelineTests */,
+				2F7124732218A64C00215C79 /* lifelineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F7124532218A64900215C79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F7124632218A64B00215C79 /* LaunchScreen.storyboard in Resources */,
+				2F7124602218A64B00215C79 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F7124672218A64B00215C79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F7124722218A64C00215C79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09ED49C9EA88CC0AE3F0BB67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lifelineUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		702CED71CC3CBDF43C9627AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lifeline/Pods-lifeline-resources.sh",
+				"${PODS_ROOT}/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework/ArcGIS.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ArcGIS.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lifeline/Pods-lifeline-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A26C3A39528CA053D430068C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lifeline/Pods-lifeline-frameworks.sh",
+				"${PODS_ROOT}/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework",
+				"${PODS_ROOT}/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ArcGIS.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/ArcGIS.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lifeline/Pods-lifeline-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6E553701D14C624D5889632 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lifelineTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D96884A915A525808E9033F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lifeline-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F7124512218A64900215C79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F7124592218A64900215C79 /* AppDelegate.swift in Sources */,
+				2F7124872218A6E200215C79 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F7124652218A64B00215C79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F71246E2218A64B00215C79 /* lifelineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F7124702218A64C00215C79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F7124792218A64C00215C79 /* lifelineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F71246B2218A64B00215C79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F7124542218A64900215C79 /* lifeline */;
+			targetProxy = 2F71246A2218A64B00215C79 /* PBXContainerItemProxy */;
+		};
+		2F7124762218A64C00215C79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F7124542218A64900215C79 /* lifeline */;
+			targetProxy = 2F7124752218A64C00215C79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2F7124612218A64B00215C79 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F7124622218A64B00215C79 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2F71247B2218A64C00215C79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F71247C2218A64C00215C79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F71247E2218A64C00215C79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6522A811BCE4E7FBC78A00CA /* Pods-lifeline.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9JBA7R48SP;
+				INFOPLIST_FILE = lifeline/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tjw.lifeline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2F71247F2218A64C00215C79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F2BAC71F6C36CA74B7A62B5 /* Pods-lifeline.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9JBA7R48SP;
+				INFOPLIST_FILE = lifeline/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tjw.lifeline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2F7124812218A64C00215C79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E3B69FAAC1688E4C95AE2D4 /* Pods-lifelineTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9JBA7R48SP;
+				INFOPLIST_FILE = lifelineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tjw.lifelineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lifeline.app/lifeline";
+			};
+			name = Debug;
+		};
+		2F7124822218A64C00215C79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC17E2BFB623CAF2454DF7D2 /* Pods-lifelineTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9JBA7R48SP;
+				INFOPLIST_FILE = lifelineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tjw.lifelineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lifeline.app/lifeline";
+			};
+			name = Release;
+		};
+		2F7124842218A64C00215C79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BB1A135EF301F6E31FEF87A /* Pods-lifelineUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9JBA7R48SP;
+				INFOPLIST_FILE = lifelineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tjw.lifelineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lifeline;
+			};
+			name = Debug;
+		};
+		2F7124852218A64C00215C79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9770A44693B61B0277974647 /* Pods-lifelineUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9JBA7R48SP;
+				INFOPLIST_FILE = lifelineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tjw.lifelineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lifeline;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F7124502218A64900215C79 /* Build configuration list for PBXProject "lifeline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F71247B2218A64C00215C79 /* Debug */,
+				2F71247C2218A64C00215C79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F71247D2218A64C00215C79 /* Build configuration list for PBXNativeTarget "lifeline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F71247E2218A64C00215C79 /* Debug */,
+				2F71247F2218A64C00215C79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F7124802218A64C00215C79 /* Build configuration list for PBXNativeTarget "lifelineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F7124812218A64C00215C79 /* Debug */,
+				2F7124822218A64C00215C79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F7124832218A64C00215C79 /* Build configuration list for PBXNativeTarget "lifelineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F7124842218A64C00215C79 /* Debug */,
+				2F7124852218A64C00215C79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2F71244D2218A64900215C79 /* Project object */;
+}
