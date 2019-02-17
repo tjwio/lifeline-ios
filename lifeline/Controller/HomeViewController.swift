@@ -226,7 +226,7 @@ class HomeViewController: UIViewController, SchoolDropdownViewDelegate, AGSGeoVi
             return
         }
         
-        let crimes = school.crimes.value.filter { abs($0.point.lat - location.coordinate.latitude) < 0.005 && abs($0.point.lon - location.coordinate.longitude) < 0.005 }
+        let crimes = school.crimes.value.filter { abs($0.point.lat - location.coordinate.latitude) < 0.002 && abs($0.point.lon - location.coordinate.longitude) < 0.002 }
         
         if crimes.isEmpty {
             schoolDropdown.dangerLevel = .ok
