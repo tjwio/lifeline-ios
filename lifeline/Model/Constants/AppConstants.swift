@@ -13,6 +13,9 @@ typealias JSON = [String: Any]
 typealias CrimeHandler = (Crime) -> Void
 typealias CrimeListHandler = ([Crime]) -> Void
 
+typealias SchoolHandler = (School) -> Void
+typealias SchoolListHandler = ([School]) -> Void
+
 typealias ErrorHandler = (Error) -> Void
 
 enum CommonError: Error {

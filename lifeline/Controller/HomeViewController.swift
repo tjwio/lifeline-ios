@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     
     let mapView: AGSMapView = {
         let map = AGSMap(basemap: .streetsNightVector())
-        map.initialViewpoint = AGSViewpoint(center: AGSPoint(clLocationCoordinate2D: Student.usc.coordinate), scale: 1.5e4)
+        map.initialViewpoint = AGSViewpoint(center: AGSPoint(clLocationCoordinate2D: School.Category.usc.coordinate), scale: 1.5e4)
         
         let mapView = AGSMapView()
         mapView.map = map
@@ -32,8 +32,8 @@ class HomeViewController: UIViewController {
             make.edges.equalToSuperview()
         }
         
-        NetworkManager.shared.loadCrimeStats(neighbourhood: Student.usc.neighbourhood, startDate: Calendar.current.date(byAdding: .month, value: -1, to: Date())!, endDate: Date(), success: { crimes in
-            self.placeMarkers(crimes: crimes)
+        SchoolHolder.shared.loadSchoolCrimes(success: { schools in
+            schools.forEach { self.placeMarkers(crimes: $0.crimes.value) }
         }) { error in
             print("failed to load crime stats with error: \(error)")
         }
