@@ -23,6 +23,16 @@
 		2F71249C2218ED5D00215C79 /* Dictionary+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F71249B2218ED5D00215C79 /* Dictionary+Decoder.swift */; };
 		2F71249E2218F6DD00215C79 /* UIColor+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F71249D2218F6DD00215C79 /* UIColor+Constants.swift */; };
 		2F7124A122190D6100215C79 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7124A022190D6100215C79 /* School.swift */; };
+		2F7124AA2219150100215C79 /* AvenirNextLTPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F7124A32219150000215C79 /* AvenirNextLTPro-Bold.otf */; };
+		2F7124AB2219150100215C79 /* AvenirNextLTPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F7124A42219150100215C79 /* AvenirNextLTPro-Regular.otf */; };
+		2F7124AC2219150100215C79 /* AvenirNextLTPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F7124A52219150100215C79 /* AvenirNextLTPro-Medium.otf */; };
+		2F7124AD2219150100215C79 /* AvenirNextLTPro-Demi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F7124A62219150100215C79 /* AvenirNextLTPro-Demi.otf */; };
+		2F7124AE2219150100215C79 /* AvenirNextLTPro-UltLt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F7124A72219150100215C79 /* AvenirNextLTPro-UltLt.otf */; };
+		2F7124AF2219150100215C79 /* AvenirNextLTPro-UltLtIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F7124A82219150100215C79 /* AvenirNextLTPro-UltLtIt.otf */; };
+		2F7124B02219150100215C79 /* AvenirNextLTPro-It.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F7124A92219150100215C79 /* AvenirNextLTPro-It.otf */; };
+		2F7124B22219151900215C79 /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7124B12219151900215C79 /* UIFont+CustomFonts.swift */; };
+		2F7124B42219154F00215C79 /* SchoolDropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7124B32219154F00215C79 /* SchoolDropdownView.swift */; };
+		2F7124B72219170100215C79 /* SchoolDropdownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7124B62219170100215C79 /* SchoolDropdownTableViewCell.swift */; };
 		80FC34E7EB7794DA7050CE54 /* Pods_lifeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76628A3202C94A22FB2FB85 /* Pods_lifeline.framework */; };
 		FF4AE3CF42561D439EA9F848 /* Pods_lifelineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A4772A98C5E15165FA3518 /* Pods_lifelineUITests.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +76,16 @@
 		2F71249B2218ED5D00215C79 /* Dictionary+Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Decoder.swift"; sourceTree = "<group>"; };
 		2F71249D2218F6DD00215C79 /* UIColor+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Constants.swift"; sourceTree = "<group>"; };
 		2F7124A022190D6100215C79 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		2F7124A32219150000215C79 /* AvenirNextLTPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Bold.otf"; sourceTree = "<group>"; };
+		2F7124A42219150100215C79 /* AvenirNextLTPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Regular.otf"; sourceTree = "<group>"; };
+		2F7124A52219150100215C79 /* AvenirNextLTPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Medium.otf"; sourceTree = "<group>"; };
+		2F7124A62219150100215C79 /* AvenirNextLTPro-Demi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Demi.otf"; sourceTree = "<group>"; };
+		2F7124A72219150100215C79 /* AvenirNextLTPro-UltLt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-UltLt.otf"; sourceTree = "<group>"; };
+		2F7124A82219150100215C79 /* AvenirNextLTPro-UltLtIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-UltLtIt.otf"; sourceTree = "<group>"; };
+		2F7124A92219150100215C79 /* AvenirNextLTPro-It.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-It.otf"; sourceTree = "<group>"; };
+		2F7124B12219151900215C79 /* UIFont+CustomFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFonts.swift"; sourceTree = "<group>"; };
+		2F7124B32219154F00215C79 /* SchoolDropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDropdownView.swift; sourceTree = "<group>"; };
+		2F7124B62219170100215C79 /* SchoolDropdownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDropdownTableViewCell.swift; sourceTree = "<group>"; };
 		6522A811BCE4E7FBC78A00CA /* Pods-lifeline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lifeline.debug.xcconfig"; path = "Target Support Files/Pods-lifeline/Pods-lifeline.debug.xcconfig"; sourceTree = "<group>"; };
 		6F2BAC71F6C36CA74B7A62B5 /* Pods-lifeline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lifeline.release.xcconfig"; path = "Target Support Files/Pods-lifeline/Pods-lifeline.release.xcconfig"; sourceTree = "<group>"; };
 		7E3B69FAAC1688E4C95AE2D4 /* Pods-lifelineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lifelineTests.debug.xcconfig"; path = "Target Support Files/Pods-lifelineTests/Pods-lifelineTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +166,7 @@
 				2F7124882218B13300215C79 /* Controller */,
 				2F7124892218B13F00215C79 /* Model */,
 				2F71248A2218B14700215C79 /* View */,
+				2F7124A2221914F200215C79 /* Resources */,
 				2F7124582218A64900215C79 /* AppDelegate.swift */,
 				2F71245F2218A64B00215C79 /* Assets.xcassets */,
 				2F7124612218A64B00215C79 /* LaunchScreen.storyboard */,
@@ -195,6 +216,8 @@
 		2F71248A2218B14700215C79 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2F7124B5221916F500215C79 /* Cells */,
+				2F7124B32219154F00215C79 /* SchoolDropdownView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +254,7 @@
 				2F71249B2218ED5D00215C79 /* Dictionary+Decoder.swift */,
 				2F7124992218BF5700215C79 /* Request+cUrl.swift */,
 				2F71249D2218F6DD00215C79 /* UIColor+Constants.swift */,
+				2F7124B12219151900215C79 /* UIFont+CustomFonts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -241,6 +265,28 @@
 				2F7124A022190D6100215C79 /* School.swift */,
 			);
 			path = School;
+			sourceTree = "<group>";
+		};
+		2F7124A2221914F200215C79 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2F7124A32219150000215C79 /* AvenirNextLTPro-Bold.otf */,
+				2F7124A62219150100215C79 /* AvenirNextLTPro-Demi.otf */,
+				2F7124A92219150100215C79 /* AvenirNextLTPro-It.otf */,
+				2F7124A52219150100215C79 /* AvenirNextLTPro-Medium.otf */,
+				2F7124A42219150100215C79 /* AvenirNextLTPro-Regular.otf */,
+				2F7124A72219150100215C79 /* AvenirNextLTPro-UltLt.otf */,
+				2F7124A82219150100215C79 /* AvenirNextLTPro-UltLtIt.otf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2F7124B5221916F500215C79 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2F7124B62219170100215C79 /* SchoolDropdownTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		8B5DF431CAC21275F12874F1 /* Frameworks */ = {
@@ -364,6 +410,13 @@
 			files = (
 				2F7124632218A64B00215C79 /* LaunchScreen.storyboard in Resources */,
 				2F7124602218A64B00215C79 /* Assets.xcassets in Resources */,
+				2F7124B02219150100215C79 /* AvenirNextLTPro-It.otf in Resources */,
+				2F7124AB2219150100215C79 /* AvenirNextLTPro-Regular.otf in Resources */,
+				2F7124AA2219150100215C79 /* AvenirNextLTPro-Bold.otf in Resources */,
+				2F7124AD2219150100215C79 /* AvenirNextLTPro-Demi.otf in Resources */,
+				2F7124AE2219150100215C79 /* AvenirNextLTPro-UltLt.otf in Resources */,
+				2F7124AF2219150100215C79 /* AvenirNextLTPro-UltLtIt.otf in Resources */,
+				2F7124AC2219150100215C79 /* AvenirNextLTPro-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,12 +570,15 @@
 				2F7124952218B64600215C79 /* AppConstants.swift in Sources */,
 				2F71249C2218ED5D00215C79 /* Dictionary+Decoder.swift in Sources */,
 				2F71249E2218F6DD00215C79 /* UIColor+Constants.swift in Sources */,
+				2F7124B22219151900215C79 /* UIFont+CustomFonts.swift in Sources */,
 				2F7124982218BA4C00215C79 /* Data+JSON.swift in Sources */,
 				2F71248D2218B1B600215C79 /* NetworkManager.swift in Sources */,
 				2F7124592218A64900215C79 /* AppDelegate.swift in Sources */,
+				2F7124B42219154F00215C79 /* SchoolDropdownView.swift in Sources */,
 				2F7124872218A6E200215C79 /* HomeViewController.swift in Sources */,
 				2F7124A122190D6100215C79 /* School.swift in Sources */,
 				2F71248F2218B1E200215C79 /* NetworkManager+CrimeData.swift in Sources */,
+				2F7124B72219170100215C79 /* SchoolDropdownTableViewCell.swift in Sources */,
 				2F71249A2218BF5700215C79 /* Request+cUrl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
