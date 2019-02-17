@@ -56,6 +56,14 @@ struct Crime: Codable {
     var start: Date
     var point: Point
     
+    var image: UIImage? {
+        return UIImage(named: "red_hex")
+    }
+    
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: point.lat, longitude: point.lon)
+    }
+    
     enum CodingKeys: String, CodingKey {
         case title, description, slug, start, point
     }
