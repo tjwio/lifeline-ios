@@ -50,7 +50,6 @@ class HomeViewController: UIViewController, SchoolDropdownViewDelegate {
             make.top.equalToSuperview().offset(68.0)
             make.leading.equalToSuperview().offset(16.0)
             make.trailing.equalToSuperview().offset(-16.0)
-            make.height.equalTo(48.0)
         }
         
         SchoolHolder.shared.loadSchoolCrimes(success: { schools in
@@ -89,15 +88,5 @@ class HomeViewController: UIViewController, SchoolDropdownViewDelegate {
         let school = SchoolHolder.shared.schools[index]
         
         mapView.setViewpoint(AGSViewpoint(center: AGSPoint(clLocationCoordinate2D: school.category.coordinate), scale: 1.5e4))
-    }
-    
-    func schoolDropdown(_ view: SchoolDropdownView, didChangeDropdownShowing isShowing: Bool) {
-        schoolDropdown.snp.updateConstraints { make in
-            make.height.equalTo(isShowing ? 48.0 * Double(SchoolHolder.shared.schools.count + 1) : 48.0)
-        }
-        
-        UIView.animate(withDuration: 0.25) {
-            self.schoolDropdown.layoutIfNeeded()
-        }
     }
 }

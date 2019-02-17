@@ -10,7 +10,6 @@ import UIKit
 import SnapKit
 
 protocol SchoolDropdownViewDelegate: class {
-    func schoolDropdown(_ view: SchoolDropdownView, didChangeDropdownShowing isShowing: Bool)
     func schoolDropdown(_ view: SchoolDropdownView, didSelect item: String, at index: Int)
 }
 
@@ -64,6 +63,7 @@ class SchoolDropdownView: UIView, UITableViewDelegate, UITableViewDataSource {
     override func updateConstraints() {
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+            make.height.equalTo(48.0)
         }
         
         super.updateConstraints()
@@ -115,8 +115,14 @@ class SchoolDropdownView: UIView, UITableViewDelegate, UITableViewDataSource {
             delegate?.schoolDropdown(self, didSelect: items[index], at: index)
         }
         
-        tableView.reloadSections(IndexSet(integer: 0), with: .none)
+        tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
         
-        delegate?.schoolDropdown(self, didChangeDropdownShowing: isDropdownShowing)
+        tableView.snp.updateConstraints { make in
+            make.height.equalTo(self.isDropdownShowing ? 48.0 * Double(self.items.count + 1) : 48.0)
+        }
+        
+        UIView.animate(withDuration: 0.25) {
+            self.superview?.layoutIfNeeded()
+        }
     }
 }
