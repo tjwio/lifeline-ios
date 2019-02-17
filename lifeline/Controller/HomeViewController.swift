@@ -10,7 +10,17 @@ import UIKit
 import ArcGIS
 import SnapKit
 
-class HomeViewController: UIViewController, SchoolDropdownViewDelegate {
+class HomeViewController: UIViewController, SchoolDropdownViewDelegate, AGSGeoViewTouchDelegate {
+    
+    private struct Constants {
+        static let dateFormatter: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MMM d, h:mm a"
+            formatter.timeZone = .current
+            
+            return formatter
+        }()
+    }
     
     let mapView: AGSMapView = {
         let map = AGSMap(basemap: .streetsNightVector())
@@ -33,6 +43,16 @@ class HomeViewController: UIViewController, SchoolDropdownViewDelegate {
         
         return dropdown
     }()
+    
+    var selectedSchool: School? = SchoolHolder.shared.schools.first {
+        didSet {
+            guard let school = selectedSchool else { return }
+            mapView.setViewpoint(AGSViewpoint(center: AGSPoint(clLocationCoordinate2D: school.category.coordinate), scale: 1.5e4))
+        }
+    }
+    
+    private var currentPopupView: CrimeInfoPopupView?
+    private var popupFrame: CGRect?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +61,8 @@ class HomeViewController: UIViewController, SchoolDropdownViewDelegate {
         
         view.addSubview(mapView)
         view.addSubview(schoolDropdown)
+        
+        mapView.touchDelegate = self
         
         mapView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -85,8 +107,84 @@ class HomeViewController: UIViewController, SchoolDropdownViewDelegate {
     // MARK: school dropdown
     
     func schoolDropdown(_ view: SchoolDropdownView, didSelect item: String, at index: Int) {
-        let school = SchoolHolder.shared.schools[index]
-        
-        mapView.setViewpoint(AGSViewpoint(center: AGSPoint(clLocationCoordinate2D: school.category.coordinate), scale: 1.5e4))
+        selectedSchool = SchoolHolder.shared.schools[index]
+    }
+    
+    // MARK: touch delegate
+    
+    func geoView(_ geoView: AGSGeoView, didTapAtScreenPoint screenPoint: CGPoint, mapPoint: AGSPoint) {
+        if let crime = selectedSchool?.crimes.value.first(where: { crime in
+            let coordinate = mapPoint.toCLLocationCoordinate2D()
+            return abs(crime.point.lat - coordinate.latitude) < 0.0001 && abs(crime.point.lon - coordinate.longitude) < 0.0001
+        }) {
+            currentPopupView?.removeFromSuperview()
+            
+            let popupView = CrimeInfoPopupView(items: [
+                (icon: "\u{e8a3}", value: Constants.dateFormatter.string(from: crime.start)),
+                (icon: "\u{e873}", value: "Two suspects used force to intimidate USC students into giving up valuables."),
+                (icon: "\u{eb41}", value: "20 y/o Asian Male"),
+                (icon: "\u{e559}", value: "Tesla Model X")
+                ])
+            
+            popupView.titleLabel.text = crime.title
+            popupView.translatesAutoresizingMaskIntoConstraints = false
+            popupView.transform = CGAffineTransform(translationX: 0.0, y: self.view.frame.size.height)
+            
+            let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.popupPanGestureRecognzier(_:)))
+            popupView.addGestureRecognizer(panGestureRecognizer)
+            
+            view.addSubview(popupView)
+            
+            popupView.snp.makeConstraints { make in
+                make.leading.trailing.equalToSuperview()
+                make.bottom.equalToSuperview()
+            }
+            
+            UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
+                popupView.transform = .identity
+            }, completion: nil)
+            
+            self.currentPopupView = popupView
+        }
+    }
+    
+    // MARK: resture recognizers
+    
+    @objc private func popupPanGestureRecognzier(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .began {
+            if popupFrame == nil { popupFrame = currentPopupView?.frame }
+        } else if let popupView = currentPopupView, let popupFrame = popupFrame {
+            if sender.state == .changed {
+                let translatedPoint = sender.translation(in: view)
+                var frame = popupView.frame
+                
+                frame.origin.y += translatedPoint.y
+                frame.origin.y = min(view.frame.maxY, frame.origin.y)
+                
+                let yDiff = popupFrame.origin.y - frame.origin.y
+                if yDiff > 0 {
+                    frame.origin.y = popupView.frame.origin.y - (1 / yDiff)
+                }
+                
+                currentPopupView?.frame = frame
+                
+                sender.setTranslation(CGPoint(x: 0.0, y: 0.0), in: view)
+            } else if sender.state == .ended {
+                let velocity = sender.velocity(in: view)
+                
+                if velocity.y > 500 || currentPopupView?.frame.minY ?? 0.0 > popupFrame.midY {
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self.currentPopupView?.transform = CGAffineTransform(translationX: 0.0, y: self.view.frame.size.height)
+                    }) { _ in
+                        self.currentPopupView?.removeFromSuperview()
+                        self.currentPopupView = nil
+                    }
+                } else {
+                    UIView.animate(withDuration: 0.3) {
+                        self.currentPopupView?.frame = popupFrame
+                    }
+                }
+            }
+        }
     }
 }

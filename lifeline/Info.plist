@@ -4,7 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Cocogoose.ttf</string>
+		<string>MaterialIcons-Regular.ttf</string>
 		<string>AvenirNextLTPro-Bold.otf</string>
 		<string>AvenirNextLTPro-Demi.otf</string>
 		<string>AvenirNextLTPro-It.otf</string>
