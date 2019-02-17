@@ -45,6 +45,15 @@ class HomeViewController: UIViewController, SchoolDropdownViewDelegate, AGSGeoVi
         return dropdown
     }()
     
+    private let backgroundImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "dark_background_image"))
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return imageView
+    }()
+    
     var selectedSchool: School? = SchoolHolder.shared.schools.first {
         didSet {
             guard let school = selectedSchool else { return }
@@ -73,6 +82,7 @@ class HomeViewController: UIViewController, SchoolDropdownViewDelegate, AGSGeoVi
         
         view.addSubview(mapView)
         view.addSubview(schoolDropdown)
+        view.addSubview(backgroundImageView)
         
         mapView.touchDelegate = self
         
@@ -84,6 +94,11 @@ class HomeViewController: UIViewController, SchoolDropdownViewDelegate, AGSGeoVi
             make.top.equalToSuperview().offset(68.0)
             make.leading.equalToSuperview().offset(16.0)
             make.trailing.equalToSuperview().offset(-16.0)
+        }
+        
+        backgroundImageView.snp.makeConstraints { make in
+            make.leading.trailing.bottom.equalToSuperview()
+            make.height.equalTo(60.0)
         }
         
         SchoolHolder.shared.loadSchoolCrimes(success: { schools in
@@ -220,5 +235,11 @@ class HomeViewController: UIViewController, SchoolDropdownViewDelegate, AGSGeoVi
         } else {
             schoolDropdown.dangerLevel = .warning
         }
+    }
+    
+    // MARK: status bar
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
