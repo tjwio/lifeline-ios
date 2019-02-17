@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias JSON = [String: Any]
+
 typealias CrimeHandler = (Crime) -> Void
 typealias CrimeListHandler = ([Crime]) -> Void
 

@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
             make.edges.equalToSuperview()
         }
         
-        NetworkManager.shared.loadCrimeStats(neighbourhood: Student.usc.neighbourhood, startDate: Date(), endDate: Calendar.current.date(byAdding: .month, value: -1, to: Date())!, success: { list in
+        NetworkManager.shared.loadCrimeStats(neighbourhood: Student.usc.neighbourhood, startDate: Calendar.current.date(byAdding: .month, value: -1, to: Date())!, endDate: Date(), success: { list in
             print("\(list)")
         }) { error in
             print("failed to load crime stats with error: \(error)")
