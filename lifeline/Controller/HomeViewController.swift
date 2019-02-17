@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 import ArcGIS
 import SnapKit
 
@@ -53,9 +54,20 @@ class HomeViewController: UIViewController, SchoolDropdownViewDelegate, AGSGeoVi
     
     private var currentPopupView: CrimeInfoPopupView?
     private var popupFrame: CGRect?
+    private var locationManager: LocationManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager = LocationManager(updateCallback: { [weak self] location in
+            self?.updateDangerStatus(location: location)
+        })
+        
+        mapView.locationDisplay.defaultSymbol = AGSPictureMarkerSymbol(image: UIImage(named: "current_location")!)
+        mapView.locationDisplay.showAccuracy = false
+        mapView.locationDisplay.autoPanMode = .off
+        mapView.locationDisplay.dataSource = locationManager
+        mapView.locationDisplay.start(completion: nil)
         
         schoolDropdown.delegate = self
         
@@ -76,6 +88,9 @@ class HomeViewController: UIViewController, SchoolDropdownViewDelegate, AGSGeoVi
         
         SchoolHolder.shared.loadSchoolCrimes(success: { schools in
             schools.forEach { self.placeMarkers(crimes: $0.crimes.value) }
+            if let location = self.locationManager.locationManager.location {
+                self.updateDangerStatus(location: location)
+            }
         }) { error in
             print("failed to load crime stats with error: \(error)")
         }
@@ -115,7 +130,7 @@ class HomeViewController: UIViewController, SchoolDropdownViewDelegate, AGSGeoVi
     func geoView(_ geoView: AGSGeoView, didTapAtScreenPoint screenPoint: CGPoint, mapPoint: AGSPoint) {
         if let crime = selectedSchool?.crimes.value.first(where: { crime in
             let coordinate = mapPoint.toCLLocationCoordinate2D()
-            return abs(crime.point.lat - coordinate.latitude) < 0.0001 && abs(crime.point.lon - coordinate.longitude) < 0.0001
+            return abs(crime.point.lat - coordinate.latitude) < 0.0005 && abs(crime.point.lon - coordinate.longitude) < 0.0005
         }) {
             currentPopupView?.removeFromSuperview()
             
@@ -185,6 +200,25 @@ class HomeViewController: UIViewController, SchoolDropdownViewDelegate, AGSGeoVi
                     }
                 }
             }
+        }
+    }
+    
+    // MARK: helper
+    
+    private func updateDangerStatus(location: CLLocation) {
+        guard let school = selectedSchool else {
+            schoolDropdown.dangerLevel = .ok
+            return
+        }
+        
+        let crimes = school.crimes.value.filter { abs($0.point.lat - location.coordinate.latitude) < 0.005 && abs($0.point.lon - location.coordinate.longitude) < 0.005 }
+        
+        if crimes.isEmpty {
+            schoolDropdown.dangerLevel = .ok
+        } else if crimes.contains(where: { $0.category.dangerLevel == .danger }) {
+            schoolDropdown.dangerLevel = .danger
+        } else {
+            schoolDropdown.dangerLevel = .warning
         }
     }
 }

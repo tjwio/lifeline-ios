@@ -24,6 +24,12 @@ class SchoolDropdownView: UIView, UITableViewDelegate, UITableViewDataSource {
     var selectedItem: String?
     var isDropdownShowing = false
     
+    var dangerLevel: DangerLevel = .ok {
+        didSet {
+            tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+        }
+    }
+    
     var tableView: UITableView = {
         let tableView = UITableView()
         tableView.allowsSelection = true
@@ -86,6 +92,8 @@ class SchoolDropdownView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         if indexPath.row == 0 {
             cell.dangerImageView.isHidden = false
+            cell.dangerImageView.image = dangerLevel.image
+            
             cell.dropdownImageView.isHidden = false
             cell.dropdownImageView.image = isDropdownShowing ? UIImage(named: "chevron_up") : UIImage(named: "chevron_down")
             cell.nameLabel.text = selectedItem

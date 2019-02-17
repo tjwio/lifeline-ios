@@ -11,6 +11,14 @@ import MapKit
 
 enum DangerLevel {
     case ok, warning, danger
+    
+    var image: UIImage? {
+        switch self {
+        case .ok: return UIImage(named: "green_ok_symbol")
+        case .warning: return UIImage(named: "yellow_warning_symbol")
+        case .danger: return UIImage(named: "red_danger_symbol")
+        }
+    }
 }
 
 struct Crime: Codable {
@@ -35,6 +43,13 @@ struct Crime: Codable {
             case .assault, .aggravatedAssault: return UIImage(named: "red_hex")
             case .robbery, .grandTheftAuto: return UIImage(named: "orange_hex")
             case .burglary, .theft, .theftFromVehicle: return UIImage(named: "yellow_hex")
+            }
+        }
+        
+        var dangerLevel: DangerLevel {
+            switch self {
+            case .homicide, .rape, .assault, .aggravatedAssault, .robbery, .grandTheftAuto: return .danger
+            default: return .warning
             }
         }
     }
