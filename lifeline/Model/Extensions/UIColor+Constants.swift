@@ -22,6 +22,12 @@ extension UIColor {
         }
     }
     
+    struct Orange {
+        static var normal: UIColor {
+            return UIColor(hexColor: 0x4F3832)
+        }
+    }
+    
     struct Yellow {
         static var normal: UIColor {
             return UIColor(hexColor: 0x825B46)

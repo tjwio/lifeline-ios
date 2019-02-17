@@ -41,6 +41,31 @@ enum Student {
 }
 
 struct Crime: Codable {
+    enum Category: String, Codable {
+        case homocide, rape, assault, robbery, burglary, theft
+        case aggravatedAssault = "aggravatedassault"
+        case grandTheftAuto = "grandtheftauto"
+        case theftFromVehicle = "theftfromvehicle"
+        
+        var color: UIColor {
+            switch self {
+            case .homocide, .rape: return UIColor.Red.normal
+            case .assault, .aggravatedAssault: return UIColor.Red.normal
+            case .robbery, .grandTheftAuto: return UIColor.Orange.normal
+            case .burglary, .theft, .theftFromVehicle: return UIColor.Yellow.normal
+            }
+        }
+        
+        var image: UIImage? {
+            switch self {
+            case .homocide, .rape: return UIImage(named: "red_hex")
+            case .assault, .aggravatedAssault: return UIImage(named: "red_hex")
+            case .robbery, .grandTheftAuto: return UIImage(named: "orange_hex")
+            case .burglary, .theft, .theftFromVehicle: return UIImage(named: "yellow_hex")
+            }
+        }
+    }
+    
     struct Point: Codable {
         var lat: Double
         var lon: Double
@@ -52,19 +77,16 @@ struct Crime: Codable {
     
     var title: String
     var description: String
-    var slug: String
+    var category: Category
     var start: Date
     var point: Point
-    
-    var image: UIImage? {
-        return UIImage(named: "red_hex")
-    }
     
     var coordinate: CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: point.lat, longitude: point.lon)
     }
     
     enum CodingKeys: String, CodingKey {
-        case title, description, slug, start, point
+        case title, description, start, point
+        case category = "slug"
     }
 }

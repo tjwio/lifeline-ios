@@ -41,12 +41,12 @@ class HomeViewController: UIViewController {
     
     func placeMarkers(crimes: [Crime]) {
         let colorMarkers = crimes.map { crime -> AGSGraphic in
-            let sym = AGSSimpleMarkerSymbol(style: .circle, color: UIColor.Red.normal.withAlphaComponent(0.30), size: 50.0)
+            let sym = AGSSimpleMarkerSymbol(style: .circle, color: crime.category.color.withAlphaComponent(0.30), size: 50.0)
             return AGSGraphic(geometry: AGSPoint(clLocationCoordinate2D: crime.coordinate), symbol: sym)
         }
         
         let imageMarkers = crimes.compactMap { crime -> AGSGraphic? in
-            guard let image = crime.image else { return nil }
+            guard let image = crime.category.image else { return nil }
             
             let marker = AGSPictureMarkerSymbol(image: image)
             return AGSGraphic(geometry: AGSPoint(clLocationCoordinate2D: crime.coordinate), symbol: marker)
