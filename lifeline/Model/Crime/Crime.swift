@@ -39,3 +39,24 @@ enum Student {
         }
     }
 }
+
+struct Crime: Codable {
+    struct Point: Codable {
+        var lat: Double
+        var lon: Double
+        
+        enum CodingKeys: String, CodingKey {
+            case lat, lon
+        }
+    }
+    
+    var title: String
+    var description: String
+    var slug: String
+    var start: Date
+    var point: Point
+    
+    enum CodingKeys: String, CodingKey {
+        case title, description, slug, start, point
+    }
+}
